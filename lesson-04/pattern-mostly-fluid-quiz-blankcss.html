@@ -61,8 +61,12 @@
       These are the responsive styles. Throw some breakpoints in here!
       */
       .container {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
+      }
+      .container2 {
+        width: 100%;
       }
 
       .box {
@@ -74,28 +78,16 @@
           color: blue;
         }
       }
-      @media screen and (min-width: 450px) {
-        .light_blue, .green {
-          width: 50%;
-        }
+      @media screen and (min-width: 500px) {
+        .dark_blue { width: 50%;}
+        .container2 { width: 50%; }
       }
-      @media screen and (min-width: 550px) {
-        .light_blue, .green {
-          width: 50%;
-        }
-        .red{
-          width: 33.333%;
-        }
-        .orange {
-          width: 66.666%;
-        }
+      @media screen and (min-width: 600px) {
+        .red { width: 25%; order: -1; }
+        .dark_blue { width: 25%; order: 1; }
       }
       @media screen and (min-width: 800px) {
-        .container {
-          width: 800px;
-          margin-left: auto;
-          margin-right: auto;
-        }
+        
       }
 
     </style>
@@ -103,10 +95,12 @@
   <body>
     <div class="container">
       <div class="box dark_blue"></div>
-      <div class="box light_blue"></div>
-      <div class="box green"></div>
+      <div class="container2">
+        <div class="box light_blue"></div>
+        <div class="box green"></div>
+      </div>
       <div class="box red"></div>
-      <div class="box orange"></div>
+      <!-- <div class="box orange"></div> -->
     </div>
   </body>
 </html>
