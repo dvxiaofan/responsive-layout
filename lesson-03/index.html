@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>flex</title>
+	<style>
+		.title {
+			font-size: 18px;
+			text-align: center;
+		}
+		.container {
+			/* width: 100%; */
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.box {
+			/* width: 150px;
+			height: 150px; */
+			width: 100%;
+			height: 100px;
+			text-align: center;
+		}
+
+		.dark_blue { background-color: darkblue; } 
+		.blue { background-color: blue; }
+		.red { background-color: red; }
+		.green { background-color: green; } 
+		.orange { background-color: orange; } 
+		.dark_green { background-color: darkgreen; }
+		.dark_red { background-color: darkred; }
+		/* @media screen and (min-width: 700px) {
+			.dark_blue {order: 4}
+			.blue {order: 5}
+			.red {order: 3}
+			.green {order: 2}
+			.orange {order: 1}
+		} */
+		header { width: 100%; order: 1; }
+		.blue { width: 50%; order: 2; }
+		.red { width: 50%; order: 3; }
+		footer { width: 100%; order: 4; }
+		.orange { width: 20%; order: 5; }
+		.dark_red { width: 60%; order: 6; }
+		.dark_green { width: 20%; order: 7; }
+
+	</style>
+</head>
+<body>
+	<div class="title">
+		Flex Item: 
+		<code>order</code>
+	</div>
+	<div class="container">
+		<header class="box lime dark_blue"></header>
+		<div class="box blue"></div>
+		<div class="box red"></div>
+		<footer class="box green"></footer>
+		<div class="box orange"></div>
+		<div class="box dark_red"></div>
+		<div class="box dark_green"></div>
+	</div>
+</body>
+</html>
